@@ -33,15 +33,15 @@ export default function Hero() {
               on the slopes of Mount Elgon.
             </p>
 
-            <Link
-              href="/shop"
+            <a
+              href="#shop"
               className="group mt-9 inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-stone-950"
             >
-              Shop Uganda 001
+              Shop Rwanda 001
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-950 transition group-hover:bg-stone-950 group-hover:text-white">
                 <ArrowRight className="h-4 w-4" />
               </span>
-            </Link>
+            </a>
           </div>
 
           <div className="relative mx-auto aspect-[3/2] w-full max-w-[36rem] overflow-hidden sm:max-w-[40rem] lg:max-w-none">

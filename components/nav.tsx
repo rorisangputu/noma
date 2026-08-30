@@ -21,35 +21,35 @@ export default function AppNavBar() {
               Home
             </Link>
 
-            <Link
-              href="/shop"
+            <a
+              href="#shop"
               className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition hover:bg-white/70 hover:text-stone-950"
             >
               Shop
-            </Link>
+            </a>
 
-            <Link
-              href="/our-story"
+            <a
+              href="#our-story"
               className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition hover:bg-white/70 hover:text-stone-950"
             >
               Our Story
-            </Link>
+            </a>
 
-            <Link
-              href="/contact"
+            <a
+              href="#contact"
               className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition hover:bg-white/70 hover:text-stone-950"
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              href="/shop"
+            <a
+              href="#shop"
               className="rounded-full bg-stone-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-800"
             >
               Shop Now
-            </Link>
+            </a>
           </div>
 
           <MobileMenu />

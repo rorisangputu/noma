@@ -1,6 +1,9 @@
 export default function OurStory() {
   return (
-    <section className="w-full bg-[#3b2a1e] px-6 py-28 text-amber-50 lg:px-10 lg:py-40">
+    <section
+      id="our-story"
+      className="w-full bg-[#3b2a1e] px-6 py-28 text-amber-50 lg:px-10 lg:py-40"
+    >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
           {/* left: label + oversized pull line */}

@@ -5,7 +5,10 @@ import { products } from "@/lib/products";
 
 export default function Shop() {
   return (
-    <section className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-32">
+    <section
+      id="shop"
+      className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-32"
+    >
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex items-end justify-between border-b border-stone-950/10 pb-6">
           <div>
