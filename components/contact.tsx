@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-32"
+      className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-10"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid grid-cols-1 gap-14 border-t border-stone-950/10 pt-16 lg:grid-cols-12 lg:gap-6">
