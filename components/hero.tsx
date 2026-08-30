@@ -13,7 +13,7 @@ export default function Hero() {
             Est. South Africa
           </span>
           <span className="text-xs font-medium uppercase tracking-[0.28em] text-stone-500">
-            Uganda 001 · Mount Elgon
+            Rwanda 001 · Gitega Hills
           </span>
         </div>
 
@@ -60,15 +60,15 @@ export default function Hero() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-5 border-t border-stone-950/10 py-6 text-xs uppercase leading-5 tracking-[0.2em] text-stone-500 sm:grid-cols-4">
           <div>
             <span className="block text-stone-950">Origin</span>
-            Mount Elgon, Uganda
+            Gitega Hills, Rwanda
           </div>
           <div>
             <span className="block text-stone-950">Process</span>
             Washed
           </div>
-          <div>
+          <div className="hidden sm:block">
             <span className="block text-stone-950">Notes</span>
-            Dark chocolate, caramel
+            Black tea, plum
           </div>
           <div>
             <span className="block text-stone-950">Roast</span>

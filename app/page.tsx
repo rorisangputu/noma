@@ -1,6 +1,9 @@
+import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import AppNavBar from "@/components/nav";
+import Shop from "@/components/shop";
+import OurStory from "@/components/story";
 
 export default function Home() {
   return (
@@ -8,6 +11,9 @@ export default function Home() {
       <AppNavBar />
       <main className="flex flex-1 flex-col">
         <Hero />
+        <OurStory />
+        <Shop />
+        <Contact />
       </main>
       <Footer />
     </div>
