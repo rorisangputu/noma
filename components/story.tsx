@@ -2,7 +2,7 @@ export default function OurStory() {
   return (
     <section
       id="our-story"
-      className="w-full bg-[#3b2a1e] px-6 py-28 text-amber-50 lg:px-10 lg:py-40"
+      className="w-full bg-[#3b2a1e] px-6 py-28 text-amber-50 lg:px-10 lg:py-36"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-6">
@@ -26,9 +26,9 @@ export default function OurStory() {
           </div>
 
           {/* right: narrative body, offset down on desktop */}
-          <div className="lg:col-span-6 lg:col-start-7 lg:pt-24">
+          <div className="lg:col-span-6 lg:col-start-7 lg:pt-0">
             <p className="text-base leading-8 text-amber-50/80">
-              NOMA began with the Putu family, bringing coffee home from small
+              NŌLU began with the Putu family, bringing coffee home from small
               farming communities across Rwanda, Burundi, Kenya and Uganda to
               share with friends in Johannesburg.
             </p>

@@ -24,7 +24,7 @@ export default function Shop() {
         <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <div key={product.slug} className="flex flex-col">
-              <div className="relative aspect-[4/5] w-full bg-stone-200/50">
+              <div className="relative aspect-[4/6] w-full bg-stone-200/50">
                 {product.image ? (
                   <Image
                     src={product.image}

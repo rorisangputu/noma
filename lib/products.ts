@@ -18,7 +18,7 @@ export type Product = {
 export const products: Product[] = [
   {
     slug: "uganda-001",
-    name: "Uganda 001",
+    name: "Uganda Mount Elgon",
     origin: "Mount Elgon, Uganda",
     notes: "Dark chocolate, blackcurrant, caramel",
     format: "250g · Whole Bean / Ground",

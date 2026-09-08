@@ -12,32 +12,34 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://www.noma.co.za";
+const siteUrl = "https://www.nolu.co.za";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "NOMA | Exceptional Coffee, Grown in Africa",
-    template: "%s | NOMA",
+    default: "NŌLU | Exceptional Coffee, Grown in Africa",
+    template: "%s | NŌLU",
   },
   description:
-    "NOMA is a woman-led, African-founded coffee company celebrating single-origin coffee grown across the continent — starting with Uganda 001, grown on Mount Elgon.",
+    "NŌLU is a woman-led, African-founded coffee company celebrating single-origin coffee grown across the continent — starting with Uganda 001, grown on Mount Elgon.",
   keywords: [
-    "NOMA",
+    "NŌLU",
+    "Nolu",
     "African coffee",
     "single origin coffee",
     "Uganda coffee",
     "Mount Elgon coffee",
     "woman-led coffee brand",
     "South African coffee",
+    "South African tea",
   ],
-  authors: [{ name: "NOMA" }],
+  authors: [{ name: "NOLU" }],
   openGraph: {
     type: "website",
     locale: "en_ZA",
     url: siteUrl,
-    siteName: "NOMA",
-    title: "NOMA | Exceptional Coffee, Grown in Africa",
+    siteName: "NŌLU",
+    title: "NŌLU | Exceptional Coffee, Grown in Africa",
     description:
       "Single-origin African coffee, sourced with care and shared with the world. Discover Uganda 001, grown on Mount Elgon.",
     images: [
@@ -45,13 +47,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NOMA — Exceptional coffee, grown in Africa.",
+        alt: "NŌLU — Exceptional coffee, grown in Africa.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NOMA | Exceptional Coffee, Grown in Africa",
+    title: "NŌLU | Exceptional Coffee, Grown in Africa",
     description:
       "Single-origin African coffee, sourced with care and shared with the world.",
     images: ["/og-image.png"],

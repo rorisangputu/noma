@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-10 py-10 md:py-12 lg:grid-cols-2 lg:gap-12 lg:py-16">
           <div>
             <h1 className="text-6xl font-light leading-[0.95] tracking-normal text-stone-950 sm:text-7xl lg:text-8xl xl:text-9xl">
-              NOMA
+              NŌLU
             </h1>
             <p className="mt-4 text-sm font-medium uppercase leading-6 tracking-[0.24em] text-stone-500">
               Exceptional coffee. Grown in Africa.

@@ -10,7 +10,7 @@ export default function AppNavBar() {
             <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-stone-950 text-sm font-bold text-white transition group-hover:bg-amber-800">
               N
             </span>
-            <span className="text-2xl font-semibold tracking-tight">NOMA.</span>
+            <span className="text-2xl font-semibold tracking-tight">NŌLU.</span>
           </Link>
 
           <div className="hidden items-center gap-2 rounded-full border border-stone-900/8 bg-white/42 p-1 shadow-sm backdrop-blur-xl lg:flex">

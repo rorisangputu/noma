@@ -14,7 +14,7 @@ export default function Footer() {
                   N
                 </span>
                 <span className="text-2xl font-semibold tracking-tight text-stone-950">
-                  NOMA.
+                  NŌLU.
                 </span>
               </Link>
               <p className="mt-4 max-w-[220px] text-sm leading-6 text-stone-600">
@@ -102,11 +102,11 @@ export default function Footer() {
               <p className="mt-4 text-sm text-stone-700">
                 Roasted in South Africa
               </p>
-              <p className="mt-1 text-sm text-stone-700">hello@noma.co.za</p>
+              <p className="mt-1 text-sm text-stone-700">hello@nolu.ie</p>
 
               <div className="mt-4 flex items-center gap-2">
                 <a
-                  href="https://www.instagram.com/noma/"
+                  href="https://www.instagram.com/nolu/"
                   aria-label="Instagram"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-stone-900/8 bg-white/45 text-stone-700 shadow-sm transition hover:bg-white/70 hover:text-stone-950"
                 >
