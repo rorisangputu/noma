@@ -6,10 +6,10 @@ export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* announcement bar */}
-      <div className="flex items-center justify-center gap-2 bg-[#f5efe6] py-3 text-sm font-medium text-stone-800">
-        Complimentary SA Shipping over R500
+      {/* <div className="flex items-center justify-center gap-2 bg-[#f5efe6] py-3 text-sm font-medium text-stone-800">
+        Shipping all over Ireland
         <span aria-hidden>→</span>
-      </div>
+      </div> */}
 
       {/* full-bleed image */}
       <div className="relative h-[80vh] min-h-[560px] w-full sm:h-[85vh]">

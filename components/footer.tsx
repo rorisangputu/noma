@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="w-full bg-[#f5efe6] px-6 pb-10 pt-16">
       <div className="mx-auto max-w-7xl">
         <div className="rounded-3xl border border-stone-900/8 bg-white/42 p-8 shadow-[0_20px_70px_rgba(45,38,25,0.08)] backdrop-blur-2xl sm:p-12">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
             <div>
               <Link href="/" className="group inline-flex items-center gap-2">
                 <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-stone-950 text-sm font-bold text-white transition group-hover:bg-amber-800">
@@ -63,7 +63,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">
                 Legal
               </h3>
@@ -93,7 +93,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-stone-500">

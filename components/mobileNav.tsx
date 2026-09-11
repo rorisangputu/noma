@@ -6,11 +6,11 @@ import { AlignJustify, X, Search, User, ShoppingBag } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/shop/beans", label: "Beans" },
-  { href: "/shop/ground", label: "Ground" },
-  { href: "/shop/tea", label: "Tea" },
-  { href: "/our-story", label: "Our Story" },
-  { href: "/contact", label: "Contact" },
+  { href: "#shop", label: "Shop" },
+  // { href: "/shop/ground", label: "Ground" },
+  // { href: "/shop/tea", label: "Tea" },
+  { href: "#our-story", label: "Our Story" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function MobileMenu() {
@@ -27,13 +27,13 @@ export default function MobileMenu() {
   return (
     <>
       <div className="flex items-center gap-1 lg:hidden">
-        <Link
+        {/* <Link
           href="/cart"
           aria-label="Cart"
           className="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-stone-700"
         >
           <ShoppingBag className="h-5 w-5" strokeWidth={1.75} />
-        </Link>
+        </Link> */}
 
         <button
           type="button"
@@ -98,7 +98,7 @@ export default function MobileMenu() {
             ))}
           </div>
 
-          <div className="mt-4 flex items-center gap-2 border-t border-stone-900/10 pt-4">
+          {/* <div className="mt-4 flex items-center gap-2 border-t border-stone-900/10 pt-4">
             <button
               type="button"
               onClick={closeMenu}
@@ -115,11 +115,11 @@ export default function MobileMenu() {
               <User className="h-4 w-4" strokeWidth={1.75} />
               Account
             </Link>
-          </div>
+          </div> */}
 
           <div className="mt-3">
             <Link
-              href="/shop"
+              href="#shop"
               onClick={closeMenu}
               className="block rounded-2xl bg-stone-950 px-4 py-3 text-center text-base font-semibold text-white transition hover:bg-amber-800"
             >
