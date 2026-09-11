@@ -16,7 +16,12 @@ export default function OrderForm({
     { slug: product.slug, quantity: 1 },
   ]);
   const [addingSlug, setAddingSlug] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
 
   const availableToAdd = allProducts.filter(
     (p) => !items.some((item) => item.slug === p.slug),
@@ -42,13 +47,25 @@ export default function OrderForm({
     setAddingSlug("");
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire this up to a real order endpoint — items is the full list to send
-    setSubmitted(true);
+    setStatus("submitting");
+
+    try {
+      const res = await fetch("/api/order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, address, items }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div className="mt-8 rounded-2xl border border-stone-950/10 bg-white/50 p-6">
         <p className="text-sm text-stone-700">
@@ -159,6 +176,8 @@ export default function OrderForm({
           id="name"
           type="text"
           required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="mt-2 w-full rounded-xl border border-stone-900/15 bg-white/50 px-4 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
         />
       </div>
@@ -174,6 +193,8 @@ export default function OrderForm({
           id="email"
           type="email"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="mt-2 w-full rounded-xl border border-stone-900/15 bg-white/50 px-4 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
         />
       </div>
@@ -189,15 +210,24 @@ export default function OrderForm({
           id="address"
           required
           rows={3}
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
           className="mt-2 w-full resize-none rounded-xl border border-stone-900/15 bg-white/50 px-4 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
         />
       </div>
 
+      {status === "error" && (
+        <p className="text-sm text-red-700">
+          Something went wrong — please try again.
+        </p>
+      )}
+
       <button
         type="submit"
-        className="mt-2 inline-flex items-center justify-center rounded-full bg-stone-950 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-amber-800"
+        disabled={status === "submitting"}
+        className="mt-2 inline-flex items-center justify-center rounded-full bg-stone-950 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-amber-800 disabled:opacity-50"
       >
-        Place Order
+        {status === "submitting" ? "Sending…" : "Place Order"}
       </button>
     </form>
   );

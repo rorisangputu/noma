@@ -33,6 +33,7 @@ export default async function OrderPage({
                 src={product.image}
                 alt={product.name}
                 fill
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
                 className="object-contain object-bottom"
               />
             ) : (

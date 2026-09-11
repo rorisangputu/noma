@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  FULFILLED
+  CANCELLED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  // null until they actually sign up with a password — until then this
+  // is just a shadow profile built from order details
+  passwordHash String?
+  orders       Order[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Order {
+  id        String      @id @default(cuid())
+  user      User        @relation(fields: [userId], references: [id])
+  userId    String
+  name      String
+  email     String
+  address   String
+  notes     String?
+  status    OrderStatus @default(PENDING)
+  items     OrderItem[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}
+
+model OrderItem {
+  id            String  @id @default(cuid())
+  order         Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId       String
+  productSlug   String
+  productName   String
+  quantity      Int
+  priceSnapshot String?
+}
+
+model Enquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+}

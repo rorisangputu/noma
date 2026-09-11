@@ -1,6 +1,34 @@
+"use client";
+
+import { useState } from "react";
 import { FaInstagram, FaTiktok } from "react-icons/fa6";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("submitting");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section
       id="contact"
@@ -39,64 +67,81 @@ export default function Contact() {
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
-            <form className="flex flex-col gap-6">
-              <div>
-                <label
-                  htmlFor="contact-name"
-                  className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500"
-                >
-                  Full Name
-                </label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  required
-                  className="mt-2 w-full border-b border-stone-900/20 bg-transparent px-1 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
-                />
+            {status === "success" ? (
+              <div className="rounded-2xl border border-stone-950/10 bg-white/50 p-6">
+                <p className="text-sm text-stone-700">
+                  Thanks, {name.split(" ")[0]} — we&apos;ve got your message and
+                  will get back to you soon.
+                </p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                <div>
+                  <label
+                    htmlFor="contact-name"
+                    className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500"
+                  >
+                    Full Name
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="mt-2 w-full border-b border-stone-900/20 bg-transparent px-1 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
+                  />
+                </div>
 
-              <div>
-                <label
-                  htmlFor="contact-email"
-                  className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500"
+                <div>
+                  <label
+                    htmlFor="contact-email"
+                    className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="mt-2 w-full border-b border-stone-900/20 bg-transparent px-1 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="contact-message"
+                    className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    required
+                    rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="mt-2 w-full resize-none border-b border-stone-900/20 bg-transparent px-1 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
+                  />
+                </div>
+
+                {status === "error" && (
+                  <p className="text-sm text-red-700">
+                    Something went wrong — please try again.
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-stone-950 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-amber-800 disabled:opacity-50"
                 >
-                  Email
-                </label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  required
-                  className="mt-2 w-full border-b border-stone-900/20 bg-transparent px-1 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="contact-message"
-                  className="text-xs font-medium uppercase tracking-[0.2em] text-stone-500"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="contact-message"
-                  required
-                  rows={4}
-                  className="mt-2 w-full resize-none border-b border-stone-900/20 bg-transparent px-1 py-3 text-sm text-stone-950 outline-none focus:border-stone-950"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="mt-2 inline-flex w-fit items-center justify-center rounded-full bg-stone-950 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-amber-800"
-              >
-                Send Message
-              </button>
-            </form>
-
-            <div className="mt-12 flex flex-col gap-1 border-t border-stone-950/10 pt-6 text-sm text-stone-600">
-              <span>hello@nolu.co.za</span>
-              <span>Roasted and fulfilled in Dublin, Ireland</span>
-            </div>
+                  {status === "submitting" ? "Sending…" : "Send Message"}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
