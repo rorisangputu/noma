@@ -1,3 +1,4 @@
+import Campaigns from "@/components/campaigns";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Shop />
         <OurStory />
+        <Campaigns />
         <Contact />
       </main>
       <Footer />
