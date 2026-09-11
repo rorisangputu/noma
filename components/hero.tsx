@@ -33,8 +33,8 @@ export default function Hero() {
             </h1>
 
             <p className="mt-5 max-w-lg text-base leading-7 text-white/75 sm:text-lg">
-              Single-origin beans, ground coffee, and tea sourced across Africa
-              — a seasonally curated selection for filter and espresso.
+              Single-origin beans, ground coffee, and tea sourced across Africa,
+              a seasonally curated selection for filter and espresso.
             </p>
 
             <Link

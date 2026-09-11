@@ -36,20 +36,20 @@ export default function OurStory() {
             <p className="mt-6 text-base leading-8 text-amber-50/80">
               Visits to family and friends across the continent turned into a
               search for the small farms and cooperatives producing exceptional
-              coffee — and a mission to give that coffee a home in South Africa.
+              coffee and a mission to give that coffee a home in South Africa.
             </p>
 
             <p className="mt-6 text-base leading-8 text-amber-50/80">
               Today, NŌLU continues this tradition as a woman-led company,
               working directly with growers across the region and roasting in
-              small batches to bring out the character of each origin — from the
+              small batches to bring out the character of each origin, from the
               bright, fruited lots of Kenya to the syrupy, tea-like cups of
               Rwanda&apos;s hills.
             </p>
 
             <p className="mt-6 text-base leading-8 text-amber-50/80">
               We believe African coffee deserves to be spoken of the way the
-              world speaks of coffee from anywhere else — by name, by farm, by
+              world speaks of coffee from anywhere else, by name, by farm, by
               the hands that grew it. Every bag we roast is one more
               introduction.
             </p>
