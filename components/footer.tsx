@@ -124,7 +124,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-10 border-t border-stone-900/8 pt-6 text-center text-xs text-stone-500">
-            © {new Date().getFullYear()} NOMA. All rights reserved.
+            © {new Date().getFullYear()} NOLU. All rights reserved.
           </div>
         </div>
       </div>

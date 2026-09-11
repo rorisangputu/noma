@@ -11,8 +11,8 @@ export default function Home() {
       <AppNavBar />
       <main className="flex flex-1 flex-col">
         <Hero />
-        <OurStory />
         <Shop />
+        <OurStory />
         <Contact />
       </main>
       <Footer />

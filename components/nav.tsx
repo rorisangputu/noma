@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Search, User, ShoppingBag } from "lucide-react";
 import MobileMenu from "./mobileNav";
 
 export default function AppNavBar() {
@@ -21,35 +22,59 @@ export default function AppNavBar() {
               Home
             </Link>
 
-            <a
+            <Link
               href="#shop"
               className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition hover:bg-white/70 hover:text-stone-950"
             >
               Shop
-            </a>
+            </Link>
 
-            <a
-              href="#our-story"
+            <Link
+              href="/our-story"
               className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition hover:bg-white/70 hover:text-stone-950"
             >
               Our Story
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="rounded-full px-4 py-2 text-sm font-medium text-stone-600 transition hover:bg-white/70 hover:text-stone-950"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <a
-              href="#shop"
-              className="rounded-full bg-stone-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-800"
+          <div className="hidden items-center gap-1 lg:flex">
+            <button
+              type="button"
+              aria-label="Search"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-stone-700 transition hover:bg-white/60 hover:text-stone-950"
+            >
+              <Search className="h-4.5 w-4.5" strokeWidth={1.75} />
+            </button>
+
+            <Link
+              href="/account"
+              aria-label="Account"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-stone-700 transition hover:bg-white/60 hover:text-stone-950"
+            >
+              <User className="h-4.5 w-4.5" strokeWidth={1.75} />
+            </Link>
+
+            <Link
+              href="/cart"
+              aria-label="Cart"
+              className="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-stone-700 transition hover:bg-white/60 hover:text-stone-950"
+            >
+              <ShoppingBag className="h-4.5 w-4.5" strokeWidth={1.75} />
+            </Link>
+
+            <Link
+              href="/shop"
+              className="ml-2 rounded-full bg-stone-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-amber-800"
             >
               Shop Now
-            </a>
+            </Link>
           </div>
 
           <MobileMenu />

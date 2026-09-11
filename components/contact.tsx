@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaInstagram, FaTiktok } from "react-icons/fa6";
 
 export default function Contact() {
@@ -23,7 +22,7 @@ export default function Contact() {
 
             <div className="mt-10 flex items-center gap-3">
               <a
-                href="https://www.instagram.com/noma/"
+                href="https://www.instagram.com/nolu/"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-900/15 text-stone-700 transition hover:border-stone-950 hover:text-stone-950"
               >
@@ -95,7 +94,7 @@ export default function Contact() {
             </form>
 
             <div className="mt-12 flex flex-col gap-1 border-t border-stone-950/10 pt-6 text-sm text-stone-600">
-              <span>hello@noma.co.za</span>
+              <span>hello@nolu.co.za</span>
               <span>Roasted and fulfilled in Dublin, Ireland</span>
             </div>
           </div>

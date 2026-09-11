@@ -63,7 +63,7 @@ export default async function OrderPage({
               <span>Tasting notes: {product.notes}</span>
             </div>
 
-            <OrderForm product={product} />
+            <OrderForm product={product} allProducts={products} />
 
             <p className="mt-8 text-xs uppercase tracking-[0.18em] text-stone-400">
               Roasted and fulfilled in Dublin, Ireland

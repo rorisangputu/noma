@@ -40,7 +40,7 @@ export default function OurStory() {
             </p>
 
             <p className="mt-6 text-base leading-8 text-amber-50/80">
-              Today, NOMA continues this tradition as a woman-led company,
+              Today, NŌLU continues this tradition as a woman-led company,
               working directly with growers across the region and roasting in
               small batches to bring out the character of each origin — from the
               bright, fruited lots of Kenya to the syrupy, tea-like cups of
