@@ -21,7 +21,7 @@ export default function Campaigns() {
 
             <p className="mt-6 max-w-sm text-base leading-7 text-stone-600">
               Our current campaign pairs single-origin coffee with the textures,
-              tones, and pace of fashion week — a limited collaboration for as
+              tones, and pace of fashion week. A limited collaboration for as
               long as the season runs.
             </p>
 

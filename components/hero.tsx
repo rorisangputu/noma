@@ -19,7 +19,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-bottom"
+          className="object-cover object-bottom-right"
         />
 
         {/* dark overlay for legibility */}

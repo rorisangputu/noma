@@ -45,7 +45,7 @@ export default function Contact() {
             </h2>
             <p className="mt-6 max-w-sm text-base leading-7 text-stone-600">
               Questions about an order, a wholesale enquiry, or just want to say
-              hello — we&apos;d love to hear from you.
+              hello, we&apos;d love to hear from you.
             </p>
 
             <div className="mt-10 flex items-center gap-3">
