@@ -28,30 +28,29 @@ export default function OurStory() {
           {/* right: narrative body, offset down on desktop */}
           <div className="lg:col-span-6 lg:col-start-7 lg:pt-0">
             <p className="text-base leading-8 text-amber-50/80">
-              NŌLU began with the Putu family, bringing coffee home from small
-              farming communities across Rwanda, Burundi, Kenya and Uganda to
-              share with friends in Johannesburg.
+              NŌLU started with the Putu family carrying coffee home from small
+              farms and cooperatives across Rwanda, Burundi, Kenya and Uganda,
+              to share with friends in Johannesburg.
             </p>
 
             <p className="mt-6 text-base leading-8 text-amber-50/80">
-              Visits to family and friends across the continent turned into a
-              search for the small farms and cooperatives producing exceptional
-              coffee and a mission to give that coffee a home in South Africa.
+              What began as visits to friends across the continent became
+              something more deliberate: a search for the growers producing
+              coffee worth traveling for, and a commitment to bring it home
+              properly.
             </p>
 
             <p className="mt-6 text-base leading-8 text-amber-50/80">
-              Today, NŌLU continues this tradition as a woman-led company,
-              working directly with growers across the region and roasting in
-              small batches to bring out the character of each origin, from the
-              bright, fruited lots of Kenya to the syrupy, tea-like cups of
-              Rwanda&apos;s hills.
+              Today NŌLU is woman-led, working directly with those same growers
+              and roasting in small batches. Bright, fruited lots from Kenya.
+              Syrupy, tea-like cups from Rwanda&apos;s hills. Each origin
+              roasted to show what it actually is.
             </p>
 
             <p className="mt-6 text-base leading-8 text-amber-50/80">
-              We believe African coffee deserves to be spoken of the way the
-              world speaks of coffee from anywhere else, by name, by farm, by
-              the hands that grew it. Every bag we roast is one more
-              introduction.
+              African coffee deserves to be named the way coffee from anywhere
+              else is named: by farm, by region, by the hands that grew it.
+              Every bag is an introduction.
             </p>
           </div>
         </div>
