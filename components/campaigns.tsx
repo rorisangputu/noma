@@ -16,7 +16,7 @@ export default function Campaigns() {
             </span>
 
             <h2 className="mt-6 text-4xl font-light leading-[1.05] tracking-tight text-stone-950 sm:text-5xl">
-              Fashion Week
+              Dublin Fashion Week
             </h2>
 
             <p className="mt-6 max-w-sm text-base leading-7 text-stone-600">

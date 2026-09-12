@@ -38,7 +38,7 @@ export default function Hero() {
             </p>
 
             <Link
-              href="/shop/beans"
+              href="#shop"
               className="mt-8 inline-flex items-center rounded-full border border-white px-7 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-stone-950"
             >
               Shop Coffee
