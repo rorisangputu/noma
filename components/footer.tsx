@@ -53,7 +53,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/shop"
+                    href="/order?product=uganda-001"
                     className="inline-flex items-center gap-1 font-semibold text-amber-800 transition hover:text-amber-900"
                   >
                     Shop Uganda 001

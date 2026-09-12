@@ -8,7 +8,7 @@ export default function Campaigns() {
       id="campaigns"
       className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-32"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <span className="text-xs font-medium uppercase tracking-[0.28em] text-stone-500">

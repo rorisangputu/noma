@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-
-import { getProductBySlug } from "@/lib/products";
 import { db } from "@/lib/db";
+import { getProductBySlug } from "@/lib/products";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
 type OrderItemInput = {
   slug: string;
@@ -9,6 +9,26 @@ type OrderItemInput = {
 };
 
 export async function POST(request: Request) {
+  const ip = getClientIp(request);
+  const { success, resetAt } = await rateLimit(`order:${ip}`, {
+    limit: 5,
+    windowSeconds: 60 * 60, // 5 orders per hour per IP
+  });
+
+  if (!success) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      {
+        status: 429,
+        headers: {
+          "Retry-After": String(
+            Math.ceil((resetAt.getTime() - Date.now()) / 1000),
+          ),
+        },
+      },
+    );
+  }
+
   const body = await request.json();
   const { name, email, address, notes, items } = body as {
     name: string;
@@ -42,8 +62,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "No valid items" }, { status: 400 });
   }
 
-  // find-or-create: don't duplicate a user record on repeat orders,
-  // and never touch passwordHash here — that's only set at real signup
   const user = await db.user.upsert({
     where: { email },
     update: { name },
