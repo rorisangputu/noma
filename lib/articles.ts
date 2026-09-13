@@ -26,7 +26,7 @@ export const articles: Article[] = [
     slug: "dublin-fashion-week-debut",
     title: "NŌLU Makes Its Dublin Independent Fashion Week Debut",
     dek: "NŌLU partners with The Fabric of Us II to introduce Uganda 001 in Ireland.",
-    date: "2026-09-01",
+    date: "2026-09-10",
     coverImage: fashionWeekCover,
     closingImage: fashionWeekCover2,
     body: [

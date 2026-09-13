@@ -6,9 +6,9 @@ export default function Shop() {
   return (
     <section
       id="shop"
-      className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-32"
+      className="w-full bg-[#f5efe6] px-6 py-24 lg:px-10 lg:py-1 lg:pb-24"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-7xl border-t border-stone-950/10 pt-24">
         <h2 className="text-4xl font-light tracking-tight text-stone-950 sm:text-5xl">
           Our Latest Releases
         </h2>

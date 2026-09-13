@@ -69,12 +69,12 @@ export default async function ArticlePage({
         </div>
 
         {article.closingImage && (
-          <div className="relative mt-12 aspect-[2/3] w-full overflow-hidden">
+          <div className="relative mx-auto mt-12 aspect-[2/3] w-full max-w-xs overflow-hidden">
             <Image
               src={article.closingImage}
               alt={`${article.title} — event photo`}
               fill
-              sizes="(max-width: 500px) 65vw, 500px"
+              sizes="(max-width: 500px) 65vw, 320px"
               className="object-cover"
             />
           </div>
