@@ -19,6 +19,15 @@ type Slide = {
 const currentCampaign = articles[0];
 
 const slides: Slide[] = [
+  {
+    image: heroImage,
+    alt: "NŌLU coffee",
+    heading: "Exceptional Coffee",
+    description:
+      "Single-origin beans, ground coffee, and tea sourced across Africa, a seasonally curated selection for filter and espresso.",
+    ctaLabel: "Shop Coffee",
+    ctaHref: "#shop",
+  },
   ...(currentCampaign
     ? [
         {
@@ -31,15 +40,6 @@ const slides: Slide[] = [
         },
       ]
     : []),
-  {
-    image: heroImage,
-    alt: "NŌLU coffee",
-    heading: "Exceptional Coffee",
-    description:
-      "Single-origin beans, ground coffee, and tea sourced across Africa, a seasonally curated selection for filter and espresso.",
-    ctaLabel: "Shop Coffee",
-    ctaHref: "#shop",
-  },
 ];
 
 export default function Hero() {

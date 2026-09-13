@@ -12,9 +12,9 @@ export default function Home() {
       <AppNavBar />
       <main className="flex flex-1 flex-col">
         <Hero />
+        <Campaigns />
         <Shop />
         <OurStory />
-        <Campaigns />
         <Contact />
       </main>
       <Footer />
