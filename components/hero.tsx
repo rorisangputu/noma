@@ -19,7 +19,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-bottom-right"
+          className="object-cover object-bottom-right lg:object-center"
         />
 
         {/* dark overlay for legibility */}
